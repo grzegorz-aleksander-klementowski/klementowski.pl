@@ -1,0 +1,121 @@
+<!--Strona pisana ręcznie!-->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drzewo genealogiczne</title>
+    <link rel="icon" type="image/png" href="./img/tab-icon.png" sizes="16x16">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima&family=Bebas+Neue&family=Red+Hat+Display:wght@300;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav>
+        <a id="home" href="index.html">
+            <svg width="24" height="18" viewBox="0 5 24 14">
+                <path fill="#ffffff" d="M12 3l-9 9h3v9h12v-9h3z"/>
+            </svg>Główna    
+        </a>
+        <a href="./nasza-historia.html">Nasza historia</a><a href="./dolacz-do-nas.html">Dołącz do nas</a><a href="./wsparcie-dla-ciebie.html">Wsparcie dla Ciebie</a><a href="./drzewo-genealogiczne.html">Drzewo genealogiczne</a><a href="./kontakt.html">Kontakt</a>        
+        <div class="container-social-media">
+            <a href="https://www.geni.com/">
+                <img class="icon-social-media" alt="icon-geni.com" src="./img/logo-geni.png">
+            </a>
+            <a href="https://www.myheritage.com/">
+                <img class="icon-social-media" alt="icon-MyHaritage.com" src="./img/logo-MyHaritage.png">
+            </a>
+            <a href="https://www.familysearch.org/en/">
+                <img class="icon-social-media" alt="icon-familysearch.com" src="./img/logo-familysearch.png">
+            </a>
+        </div> 
+        <button onclick="mobileMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="black">
+                <rect y="6" width="24" height="2" rx="1" fill="white"/>
+                <rect y="12" width="24" height="2" rx="1" fill="white"/>
+                <rect y="18" width="24" height="2" rx="1" fill="white"/>
+            </svg>
+        </button>
+    </nav>
+
+    <header>
+        <section class="hero-section sites"> <!--HERO-->
+            <h1>Drzewo Genealogiczne</h1>
+            <p>Ponnaj to co już udało się odkryć!</p>
+        </section>
+    </header>
+
+    <aside>
+        <div class="container-social-media">
+            <a href="https://www.geni.com/">
+                <img class="icon-social-media" alt="icon-geni.com" src="./img/logo-geni.png">
+            </a>
+            <a href="https://www.myheritage.com/">
+                <img class="icon-social-media" alt="icon-MyHaritage.com" src="./img/logo-MyHaritage.png">
+            </a>
+            <a href="https://www.familysearch.org/en/">
+                <img class="icon-social-media" alt="icon-familysearch.com" src="./img/logo-familysearch.png">
+            </a>
+        </div> 
+    </aside> 
+
+    <main class="sites drzewo-genealogiczne-site">
+        <section class="top-section">            
+            <div>
+                <p class="adnote">po pierwsze</p>
+                <h2>Dlaczego warto badać swoje korzenie?</h2>
+                <p>Odkrywanie swoich korzeni to wyjątkowa podróż w czasie, która pozwala poznać tętniącą życiem historię Twojej rodziny. Dowiesz się, skąd pochodzą Twoi przodkowie, jakie mieli zawody, jakie były ich pasje i jak wpłynęli na świat, w którym żyjemy. To fascynująca przygoda, która pozwoli Ci lepiej zrozumieć swoją tożsamość i miejsce w historii.</p>
+            </div>
+            <div>
+                <img src="./img/searching-genealogy-top.jpg" alt="">
+            </div>
+        </section>
+        <section class="genealogical-platforms dark-green-background">
+            <h2>Drzewo genealogiczne na trzech platformach</h2>
+            <p>Chcemy ułatwić Ci badanie genealogiczne, dlatego możesz wybierać spośród trzech popularnych platform:</p>
+            <ul>
+                <li><h3>Geni</h3><img src="./img/example-tree-geni.jpg" alt="geni.com-picture"><p><strong><a href="www.geni.com/" target="_blank">Geni (polecane):</a> </strong>Geni to interaktywna platforma społecznościowa, która umożliwia łatwe tworzenie i dzielenie się drzewem genealogicznym z rodziną i innymi badaczami genealogicznymi. Geni jest polecane ze względu duża swobodę <b>współpracy</b> pomiędzy członkami rodziny i zaangażowanych przy budowie drzewa. Link do już utworzonego drzewa można znaleźć tutaj: <a href="https://www.geni.com/people/Grzegorz-Klementowski/6000000187837988840"><u><b>link</b></u></a></b>.</p></li>
+                <li><h3>MyHeritage</h3><img src="./img/example-tree-myheritage.jpg" alt="myheritage.com-picture"><p><strong><a href="www.myhearitage.com/" target="_blank">MyHeritage:</a> </strong> MyHeritage oferuje zaawansowane narzędzia do badania genealogicznego, badania DNA oraz budowania pięknego drzewa genealogicznego online. Link do już utworzonego drzewa można znaleźć tutaj: <a href="https://www.myheritage.pl/member-597726591_319361431/member"><u><b>link</b></u></a>.</p></li>
+                <li><h3>FamilySearch</h3><img src="./img/example-tree-familysearch.jpg" alt="familysearch.com-picture"><p><strong><a href="www.familysearch.com/" target="_blank">FamilySearch:</a> </strong>FamilySearch to bezpłatna platforma genealogiczna utrzymywana przez Kościół Jezusa Chrystusa Świętych w Dniach Ostatnich. To świetne miejsce do rozpoczęcia poszukiwań swoich przodków.</p></li>
+            </ul>
+        </section>
+        <section class="genealogical-platforms">
+            <h2>Twórz drzewo offline</h2>
+            <p>Nie musisz ograniczać się do platform internetowych. Możesz także tworzyć swoje drzewo genealogiczne offline, używając specjalistycznych programów genealogicznych. Oto niektóre z popularnych programów do tworzenia drzewa genealogicznego offline:</p>
+            <ul>
+                <li><img src="./img/example-tree-legacy-family-tree.jpg" alt=""><p><strong><a href="https://legacyfamilytree.com/" target="_blank" style="color: black">Legacy Family Tree:</a> </strong>Potężne i łatwe w obsłudze narzędzie, które pozwala na przechowywanie informacji o Twoich przodkach, dodawanie zdjęć, historii i wiele więcej.</p></li>
+                <li><img src="./img/example-tree-ancestris.png" alt=""><p><strong><a href="https://www.ancestris.org/index_pl.html" style="color: black">Ancestris:</a> </strong>Jest to kolejny darmowy program genealogiczny dla systemu Linux. Oferuje zaawansowane funkcje, takie jak importowanie i eksportowanie danych w różnych formatach, zarządzanie zdjęciami, generowanie raportów i wiele więcej.</p></li>
+            </ul>
+        </section>
+        <section class="middle-section">
+            <div>
+                <img src="./img/searching-genealogy.jpg" alt="szukanie genealogii">
+            </div>
+            <div>
+                <h2>Podziel się swoimi odkryciami!</h2>
+                <p>Jedną z najpiękniejszych rzeczy w badaniu genealogicznym jest możliwość dzielenia się odkryciami z innymi. Zachęcamy Cię, abyś podzielił się swoim drzewem genealogicznym i historią rodziny na platformach takich jak Geni, MyHeritage i FamilySearch. Dzięki temu inni mogą odkryć swoje połączenia z Twoją rodziną i razem możecie odtworzyć więzi, które przez lata mogły zostać zagubione. Nie tylko wzbogacisz historię swojej rodziny, ale także poznasz wartościowych ludzi, którzy mają wspólne korzenie. A jeśli wolisz zachować prywatność, możesz również tworzyć swoje drzewo genealogiczne offline za pomocą dedykowanych programów, które pozwolą Ci zgłębiać fascynującą historię Twojego rodu.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Zawartość stopki -->            
+        <p><b>&copy; 2023</b></p>
+        <p> Stowarzyszenie Rodzin Klementowskich. Wszelkie prawa zastrzeżone.</p>                
+        <a href="mailto:kontakt@klementowski.pl">                    
+            <svg width="14" height="14" viewBox="0 0 24 24">
+                <path fill="white" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>                    
+            kontakt@klementowski.pl
+        </a>
+    </footer>
+    
+</body>
+
+</html>

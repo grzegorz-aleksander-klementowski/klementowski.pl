@@ -1,92 +1,905 @@
-* {
+/*Tags*/
+
+body{
+    margin: 0;
+    width: 100%;
+    color: #101010;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body > *{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body > * > * {
+    padding: 0 10% 0 10%;
+    margin: 0; 
+
+    opacity: 0;
+    animation-name: loading-elements;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    font-size: 80%;
+}
+
+@keyframes loading-elements{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+section{
+    width: 80%;
+}
+
+
+/*HEADER*/
+
+header::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 1;
+    z-index: 0;
+
+    animation-name: header-before;
+    animation-duration: 3s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes header-before{
+    from {opacity: 1;}
+    to {opacity: 0.6;}
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('./img/cover_img-bg_img_las.jpg');
+    background-color: green;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat:repeat;
+    background-position: center;
+    color: aliceblue;
+    z-index: -1;  
+    
+    height: 100vh;
+}
+
+header > section
+{
+    position: relative;
+    z-index: 1;
+}
+
+header > section.sites{
+    margin-top: 10vh;
+    text-align: center;
+}
+
+aside > .container-social-media{
+    position:absolute;
+    padding: 0;
+    z-index: 1;
+    margin: 10px;
+}
+
+.icon-social-media{
+    width: 30px;
+    height: 30px;
+    background-color: whitesmoke;
+}
+
+.icon-social-media:hover{
+    scale: 1.1;
+    opacity: 0.8;
+}
+
+header section.top-bar-section > div{
+    width: 33%;
+    display: inline-block;    
+}
+
+header section.top-bar-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+
+header > section.hero-section > div.container-crats{  /*sticky-element*/
+    width: 100%;
+    text-align: center;    
+}
+
+
+header section.hero-section > div.container-crats > img{ 
+    width: 10%;    
+}
+
+
+header > section.hero-section{
+    opacity: 0;
+    animation-name: hero-section;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-section {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+header > section.hero-section h1{
+    text-align: center;
+    font-size: 6vw;
+}
+
+header > section.hero-section p{
+    margin-top: 6%;
+    margin-left: 40%;
+}
+
+header > section.sites p{
+    margin-top: 10px;
+}
+
+header > section.cta-section{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    animation-name: cta-section;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    font-size: 80%;
+    margin-top: 5%;
+    margin-bottom: 8vh;
+    text-align: center;
+    width: 80%;
+}
+
+@keyframes cta-section {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/*NAV*/
+nav{
+    width: auto;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+nav > button{
+    display: none;
+ }  
+
+nav > a:hover{
+    background: #202020;
+    text-decoration: underline;
+}
+nav > a#home{
+    margin-right: auto;
+    padding: 13px 2% 13px 2%;
+}
+
+nav > a:not(#home){
+    padding: 15px 2% 14px 2%;
+}
+
+nav div.mobile-menu{
+    display: none;
+}
+
+nav div.container-social-media{
+    display: none;
+}
+
+/*MAIN*/
+
+main{
+    background-color: white;
+    padding-top: 100px;
+    margin-top: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main > section{
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+main > section.highlight-message {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    font-size: 250%;
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    margin: 0 10% 0 10%;
+}
+
+main > section.highlight-message h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+main > section.upper-section > div{
+    width: 150px;
+    margin: 30px;
+    text-align: center;
+    border: 3px black solid;
+    border-radius: 5%;
+    padding: 5%;
+    color: green;
+}
+
+main > section.middle-section{
+    background-color: #063106;
+    color:aliceblue;
+}
+
+main > section.middle-section > div{
+    width: 50%;
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+main > section.lower-section > div{
+    width: 50%;
+    height: 100%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+main > section.top-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section.top-section > div{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main > section.top-section > div > *{
+    margin: 50px;
+    height: auto;
+}
+main > section.top-section > div > h2{
+    margin: 50px;
+}
+
+main > section.top-section > div > p{
+    margin: 0px;
+    width: 50%;    
+}
+
+main.sites > section.genealogical-platforms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.sites > section.genealogical-platforms > ul {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: row;
+}
+
+main.sites > section.genealogical-platforms > ul {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: row;
+    list-style: none;
+}
+
+main.sites > section.genealogical-platforms > ul > li {
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+main.sites > section.genealogical-platforms > ul > li > img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+main > section img{
+    width: 80%
+}
+
+button{
+    background-color: #009C00;
+    color: aliceblue;
+    font-size: 80%;
+    border-style: none;
+    border-radius: 27px;
+    padding: 12px 14px 14px 14px;
+    margin: 10px 0 10px 0;
+    font-weight: bold; 
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #229D22;
+    transform: scale(1.08);
+    transition: transform 0.5s ease-in-out;
+}
+
+button:active{
+    cursor: pointer;
+    background-color: #008B00;
+    border-right: 2px #005800 solid;
+    border-bottom: 2px #005800 solid;
+}
+
+main.sites {
+    display: flex;
+    margin-top: 30vh;
+    min-height: 300px;
+}
+
+main.sites > section > aside,
+main.sites > section > article {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.sites > section > aside{
+    flex-basis: 30%;
+    min-height: 400px;
+}
+
+main.sites > section > aside::after{
+    width: 20px;
+    height: 50px;
+    background-color: #101010;
+    position: fixed;
+}
+
+main.sites > section > article {
+    flex-basis: 70%;
+}
+
+main.sites > section > * > *{
+    margin: 5%;
+}
+
+main.sites > section > aside > figure{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 100px 0 100px 0;
+    border: 2px black solid;
+    position: relative;
+    z-index: 2;
+}
+
+main.sites > section > aside > figure > img{
+    width: 100%;
+    height: 100%;
+}
+
+main.sites > section > aside > span#figure-line-connector{
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    width: 2px;
+    height: 2300px;
+}
+
+main.sites > section > article.nasza-historia-site{
+    margin-top: 15%;
+}
+
+main.sites > section > article.nasza-historia-site > p{
+    height: 100px;
+    margin: 0px 25px 200px 25px; 
+}
+
+main.sites > section > article.nasza-historia-site > h3{
+    height: 100px;
+    margin: 0px 25px 15px 25px; 
+}
+
+main.drzewo-genealogiczne-site > section.middle-section > div > img {
+    height: 300px;
+}
+
+main.sites > article{
+    margin-bottom: 15px;
+}
+
+main.nasza-historia{
+    padding-top: 0;
+}
+
+main.kontakt button {
+    max-width: 250px;
+}
+
+main.kontakt > section {
+    margin-top: 50px;
+    text-align: revert;
+}
+
+main.kontakt > section h2, main.kontakt > section h3 {
+    margin-top: 20px;
+}
+
+main.kontakt > section iframe {
+    width: 600px;
+    height: 450px;
+}
+
+/*OTHER*/
+
+
+
+img{
+    width: 100px;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
-  
-  .header-of-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .container-social-media {
-    display: flex;
-  }
-  
-  .icon-social-media {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .family.title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .container-crats {
-    display: flex;
-    align-items: center;
-  }
-  
-  .crest {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .header-main-content {
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 180%;
+}
+
+p{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+p.adnote{
+    font-family: 'Agdasima', sans-serif;
     text-align: center;
-    margin-top: 20px;
-  }
-  
-  .cover-img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
     margin-bottom: 20px;
-  }
-  
-  header h1 {
-    font-size: 32px;
-    font-weight: bold;
-  }
-  
-  header p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  header h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  
-  header button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav li {
-    margin-right: 10px;
-  }
-  
-  nav a {
+}
+
+strong{
+    font-family: 'Agdasima', sans-serif;
+}
+
+a{
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
-  }
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:visited{
+    color: white;
+}
+
+footer{
+    position:relative;
+    background-color: black;
+    color: white;    
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p{
+    width: 20%;
+    text-align: left;
+    padding: 5%;
+}
   
+footer > a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/*Ids*/
+
+/*Classes*/
+
+.dark-green-background {
+    background-color: #063106;
+    color: white;
+}
+
+.dark-blue-background {
+    background-color: #001868;
+    color: white;
+}
+
+.mobile{
+    display: none;
+}
+
+
+/*@media*/
+
+@media (max-width: 820px) {
+    
+    body > footer > * {
+        padding: 0;
+    }
+
+    header > section.hero-section p{
+        margin: 0;
+    }
+
+    section{
+        width: auto;
+    }
+    
+
+    nav{
+        opacity: 9;
+        flex-direction: column;
+        justify-content: start;
+        transition: top 1s;
+
+        display: flex;
+        position: fixed;
+        z-index: 9999;
+        top: -120%;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    nav > a{
+        display: block;
+        /*display: none;*/        
+        padding: 5vh 0 5vh 0;
+        width: 100%;
+        text-align: center;
+    }
+    nav > a#home{
+        margin: inherit;
+    }
+    nav > div.container-social-media{
+        display: block;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav > div.container-social-media > a{
+        margin: 5px;
+    }
+
+    nav > button{
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        right: 0;
+        display: block;
+        align-self:flex-start;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        padding: 2px;
+        margin: 5px 20px 5px 0;
+    }
+
+    nav > button:hover{
+        color: #202020;
+        cursor: pointer;
+    }
+
+
+
+    main.sites > section > * > *{
+        margin: 5%;
+    }
+    
+    main.sites > section > aside > figure{
+        width: 175px;
+        height: 175px;
+    }
+
+    main.sites > section > article.nasza-historia-site{
+        margin-top: 15%;
+    }
+    
+    main.sites > section > article.nasza-historia-site > p{
+        height: 100px;
+        margin: 0px 25px 200px 25px; 
+    }
+    
+    main.sites > section > article.nasza-historia-site > h3{
+        height: 30px;
+        margin: 0px 25px 20px 25px; 
+    }
+
+    main.drzewo-genealogiczne-site > section.middle-section > div > img {
+        height: 200px;
+    }
+    
+}
+
+@media (max-width: 600px){
+
+    h2{
+        padding: 0 2% 0 2%;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    main > section.upper-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main.sites > section > aside > figure{
+        margin: 160px 0 160px 0;
+    }
+
+    main.sites > section > article.nasza-historia-site > p{
+        height: 100px;
+        margin: 0px 25px 300px 25px;
+    }
+
+    main.sites > section > aside > span#figure-line-connector{
+        height: 2850px;
+    }
+
+    
+    main.kontakt > section iframe {
+    width: 100%;
+    height: 350px;
+}
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    footer > p {
+        width: 30%;
+        text-align: left;
+        margin-top: 7%;
+        margin-bottom: 7%;
+      }
+
+      main.sites > section.genealogical-platforms > ul {
+        flex-direction: column;
+    }
+    
+    main.sites > section.genealogical-platforms > ul > li > img {
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 500px){
+    main.sites > section > aside > figure {
+        width: 120px;
+        height: 120px;
+        margin: 240px 0 240px 0;
+    }
+
+      main.sites > section > article.nasza-historia-site > p{
+        margin: 0px 25px 450px 25px;
+    }
+
+    main.sites > section > aside > span#figure-line-connector {
+        height: 3600px;
+      }
+
+      main.sites > section.genealogical-platforms > ul {
+        width: 100%;
+        padding: 0;
+      }
+
+      main.sites > section.genealogical-platforms > ul > li {
+        width: 100%;
+      }
+
+      main.sites > section.middle-section {
+        flex-direction: column;
+      }
+
+      main.sites > section.middle-sectio > div {
+        width: 100%;
+      }
+
+      
+    main.kontakt > section iframe {
+        height: 280px;
+    }
+
+}
+
+@media (max-width: 420px){
+
+    body > * > *{
+        padding: 0;
+    }
+
+    h2 {
+        padding: 0;
+        margin: 15% 5% 15% 5%;
+    }
+
+    p {
+        text-align: justify;
+        margin: 5%;
+    }
+
+    header section.top-bar-section {
+        margin-top: 0;
+    }
+
+    header > * {
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    header > section.cta-section{
+        width: 90%;
+    }
+
+    main > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0;
+
+       
+
+    }
+
+    main.sites > section > * > * {
+        margin: 0;        
+    }
+
+    main > section.middle-section{
+        padding-bottom: 5%;
+    }
+
+    main > section.lower-section{
+        padding-top: 5%;
+    }
+
+    main > section.middle-section > div{
+        margin: 0;
+        width: 100%;
+        
+    }
+
+    main > section.lower-section > div{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    main > section img{
+        width: 100%
+    }
+
+    main > section.nasza-historia-site{
+        flex-direction: row;        
+    }
+
+    main > section.nasza-historia-site > article.nasza-historia-site{
+        margin-top: 20px;
+        flex-basis: 90%;
+    }
+
+    main.sites > section > aside{
+        flex-basis: 10%;
+    }
+
+    main.sites > section > aside > figure {
+        width: 70px;
+        height: 70px;
+        margin: 300px 0 300px 0;
+        overflow: clip;
+    }
+
+      main.sites > section > article.nasza-historia-site > p{
+        margin: 0px 5px 500px 5px;
+    }
+
+    main > section.top-section > div > p {
+        width: 90%;
+        margin: 10% 10% 10% 10%;
+    }
+
+
+    main.sites > section > aside > span#figure-line-connector {
+        height: 4000px;
+      }      
+
+      main.drzewo-genealogiczne-site > section.top-section > div > img {
+        margin: auto;
+      }
+
+      main.drzewo-genealogiczne-site > section.middle-section > div > img {
+        height: 300px;
+      }
+
+      main.drzewo-genealogiczne-site > section.middle-section > div > p {
+        width: 90%;
+        margin: 15% 5% 15% 5%;
+      }
+
+      main.sites > section.genealogical-platforms > ul > li {
+        max-width: none;
+      }
+
+      main.sites > section.genealogical-platforms > ul > li > h3 {
+        margin-top: 100px;
+        margin-bottom: 30px;
+      }
+
+      
+    main.kontakt > section iframe {
+        height: 250px;
+    }
+
+
+}

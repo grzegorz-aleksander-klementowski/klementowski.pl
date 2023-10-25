@@ -1,60 +1,152 @@
+<!--Strona pisana ręcznie!-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodzina Klementowskich</title>
-
+    <title>Strona Rodzinna Klementowskich</title>
+    <link rel="icon" type="image/png" href="./img/tab-icon.png">
     <link rel="stylesheet" href="./style.css">
     <script src="script.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima&family=Bebas+Neue&family=Red+Hat+Display:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    <nav>
+        <a id="home" href="index.html">
+            <svg width="24" height="18" viewBox="0 5 24 14">
+                <path fill="#ffffff" d="M12 3l-9 9h3v9h12v-9h3z"/>
+            </svg>Główna
+        </a>
+        <a href="./nasza-historia.html">Nasza historia</a><a href="./dolacz-do-nas.html">Dołącz do nas</a><a href="./wsparcie-dla-ciebie.html">Wsparcie dla Ciebie</a><a href="./drzewo-genealogiczne.html">Drzewo genealogiczne</a><a href="./kontakt.html">Kontakt</a>        
+        <div class="container-social-media">
+            <a href="https://www.geni.com/">
+                <img class="icon-social-media" alt="icon-geni.com" src="./img/logo-geni.png">
+            </a>
+            <a href="https://www.myheritage.com/">
+                <img class="icon-social-media" alt="icon-MyHaritage.com" src="./img/logo-MyHaritage.png">
+            </a>
+            <a href="https://www.familysearch.org/en/">
+                <img class="icon-social-media" alt="icon-familysearch.com" src="./img/logo-familysearch.png">
+            </a>
+        </div> 
+        <button onclick="mobileMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="black">
+                <rect y="6" width="24" height="2" rx="1" fill="white"/>
+                <rect y="12" width="24" height="2" rx="1" fill="white"/>
+                <rect y="18" width="24" height="2" rx="1" fill="white"/>
+            </svg>
+        </button>
+    </nav>
     <header>
-        <section class="header-of-header">
-            <div class="container-social-media">
-                <a href="https://www.geni.com/family-tree/index/6000000187837988840"><div class="icon-social-media">             <img class="icon-social-media" alt="icon-social-media" src="./img/logo-geni.png"></div></a>
-                <a href="https://www.myheritage.com/"><div class="icon-social-media">       <img class="icon-social-media" alt="icon-social-media" src="./img/logo-MyHaritage.png"></div></a>
-                <a href="https://www.familysearch.org/en/"><div class="icon-social-media">  <img class="icon-social-media" alt="icon-social-media" src="./img/logo-familysearch.png"></div></a>
-            </div>
-            <div class="family title">Rodzina Klementowskich</div>
+        <section class="top-bar-section"> <!--Social Media place-->
+            <h2>Strona Rodzinna Klementowskich</h2>      
+        </section>
+        <section class="hero-section"> <!--HERO-->
             <div class="container-crats">                
-                <img class="crest" alt="crest" src="">
-                <img class="crest" alt="crest" src="./img/crest-Sas-herb.png">
-                <img class="crest" alt="crest" src="./img/brand-Jastrzębiec_herb.svg.png">
-                <img class="crest" alt="crest" src="./img/crest-Prus-I-herb.png">
-                <img class="crest" alt="crest" src="">
-            </div>
-        </section>
-        <section class="header-main-content">
-            <img class="cover-img" alt="cover-img-main" src="./img/cover-img.png">
-            <h1>Rodzina strona rodu Klementowskich</h1>
-            <p>Strona Rodu Klementowskich jest poświęcona zgłębianiu historii, genealogii i więzi rodzinnych Klementowskich oraz pokrewnych. Znajdziesz tutaj bogate informacje na temat historii rodu, opowieści o naszych przodkach i genealogiczne drzewo rodowe. Nasze stowarzyszenie jest zaangażowane w wspieranie rodzinnych biznesów, odnawianie rodzinnych kontaktów oraz pomoc w odnajdywaniu korzeni. Zapraszamy Cię do odkrywania naszej historii i dołączania do nas w poszukiwaniu wspólnych więzi rodzinnych.</p>
-        </section>
-        <section>
+                <img class="crest" alt="Herb Sas" src="./img/crest-Sas-herb-removebg-preview-2.png">                    
+                <img class="crest" alt="Herb Prus I" src="./img/crest-Prus-I-herb-removebg-preview.png">
+                <img class="crest" alt="Herb Jastrzębiec" src="./img/brand-Jastrzębiec_herb.svg.png">
+                <!--<img class="crest" alt="Herb Jastrzębiec" src="./img/canvas-Jastrzębie-bw-removebg-preview.png">-->                
+            </div>  
+            <h1>Odnajdź samego siebie!</h1>
+            <p>Strona ta poświęcona jest zgłębianiu historii, genealogii oraz więzi rodziny Klementowskich i rodzin pokrewnych. Znajdziesz tutaj bogate informacje dotyczące historii rodu, w tym opowieści o naszych przodkach oraz genealogiczne drzewo rodowe. Nasze stowarzyszenie angażuje się w wsparcie rodzinnych biznesów, odnawianie rodzinnych kontaktów oraz pomoc w odnajdywaniu rodzinnych korzeni. Zapraszamy Cię do odkrywania naszej historii i dołączenia do nas w poszukiwaniu wspólnych więzi.</p>        </section>
+        <section class="cta-section"> <!--CTA-->
             <h3>Stwórz z nami Twoją markę osobistą | www.twoje-imię.klementowski.pl | twoje-imię.drugie-imię@klementowski.pl</h3>
-            <button>Skontaktuj się z nami!</button>
+            <a href="mailto:kontakt@klementowski.pl"></a>
         </section>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="">O nas</a></li>
-            <li><a href="">Dołącz do nas</a></li>
-            <li><a href="">Wsparcie dla Ciebie</a></li>
-            <li><a href="">Drzewo genealogiczne</a></li>
-            <li><a href="">Kontakt</a></li>
-        </ul>
-    </nav>
-
+    <aside>
+        <div class="container-social-media">
+            <a href="https://www.geni.com/">
+                <img class="icon-social-media" alt="icon-geni.com" src="./img/logo-geni.png">
+            </a>
+            <a href="https://www.myheritage.com/">
+                <img class="icon-social-media" alt="icon-MyHaritage.com" src="./img/logo-MyHaritage.png">
+            </a>
+            <a href="https://www.familysearch.org/en/">
+                <img class="icon-social-media" alt="icon-familysearch.com" src="./img/logo-familysearch.png">
+            </a>
+        </div> 
+    </aside>     
     <main>
+        <button>
+            <svg width="14" height="14" viewBox="0 0 24 14">
+                <path fill="white" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <a href="mailto:kontakt@klementowski.pl">Skontaktuj się z nami!</a>
+        </button>
         <!-- Główna treść strony -->
+        <section class="upper-section">
+            <div>
+                <div>
+                    <img src="./img/icon-love.png" alt="love-icon" loading="lazy">
+                </div>
+                <div>
+                    <p>Poznaj nowych ludzi, współpracuj, dziel się rodzinnymi historiami. Bierz udział we wspólnych wydarzeniach i zjazdach!</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./img/icon-help-2.png" alt="help-icon" loading="lazy">
+                </div>
+                <div>
+                    <p>Poprzez długotrwałą współpracę, możesz zyskać więcej niż Ci się wydaje. Poznasz nowe gałęzie w swoim drzewie genealogicznym i nawiążesz nowe przyjaźnie.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./img/icon-help.png" alt="help-icon" loading="lazy">
+                </div>
+                <div>
+                    <p>Pomożemy rozwinąć Twoją markę osobistą! Chcesz, aby nasza społeczność usłyszała o Twojej działalności? Zareklamuj swój biznes! Członkowie stowarzyszenia mogą korzystać z domeny, jak i miejsca na serwerze.</p>
+                </div>
+            </div>
+        </section>
+        <section class="middle-section"> <!--features-section-->
+            <div>
+                <img src="./img/rodzina_razem (2).jpg" alt="upper-section-img" loading="lazy">
+            </div>
+            <div>
+                <p class="adnote">...warto nadmienić</p>
+                <h2>Dzięki współpracy można osiągnąć więcej</h2>
+                <p>Przyłóż się do wspólnej pracy! Odkrywaj siebie i swoją historię! Dowiedz się wielu ciekawostek o nowej rodzinie i motywuj się tym, aby budować wielopokoleniowe wartości. Rozbuduj swoje drzewo genealogiczne. Twórz szerokie kontakty, poznając nowych i wartościowych ludzi. Posiadanie wspólnych korzeni pozwala lepiej zrozumieć siebie i swoje potrzeby. Znajdziesz tu również wsparcie, zrozumienie i pomoc w tworzeniu swojej własnej marki osobistej.</p>
+            </div>
+        </section>        
+        <section class="lower-section">                
+            <div>
+                <p class="adnote">...niezapomniane wrażania</p>
+                <h2>Inwestycja na dekady</h2>
+                <p>Twórz, działaj, baw się! Odbudujmy wspólnie nasze relacje wielopokoleniowe oraz więzi rodzinne, które przez trudny okres w historii naszego państwa zostały zatracone poprzez emigrację lub inne zdarzenia. Dzisiaj mamy niepowtarzalną szansę budować wspólną przyszłość opartą na relacjach międzyludzkich. :)</p>
+            </div>
+            <div>
+                <img src="./img/rodzina_razem (1).jpg" alt="lower-section-img" loading="lazy">
+            </div>
+        </section>
+        <!--
+        <section class="highlight-message dark-blue-background">
+            <div>
+                <h1>Razem Tworzymy wspólnote</h1>
+            </div>
+        </section> -->
     </main>
 
     <footer>
-        <!-- Zawartość stopki -->
+        <!-- Zawartość stopki -->            
+        <p><b>&copy; 2023</b></p>
+        <p> Stowarzyszenie Rodzin Klementowskich. Wszelkie prawa zastrzeżone.</p>                
+        <a href="mailto:kontakt@klementowski.pl">                    
+            <svg width="14" height="14" viewBox="0 0 24 24">
+                <path fill="white" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>                    
+            kontakt@klementowski.pl
+        </a>
     </footer>
+    
 </body>
 
 </html>
